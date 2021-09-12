@@ -5,6 +5,13 @@
  */
 package javalearning;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import javalearning.model.Animal;
+import javalearning.model.Bat;
+import javalearning.model.Dog;
+import javalearning.model.Square;
+
 /**
  *
  * @author prasa
@@ -24,8 +31,6 @@ public class Main {
         String school = "Ananda collage";
 
         String fullName = firstName + lastName;
-
-        String[] words = school.split(" ");
 
         double height = 165.5; //in cm
 
@@ -81,17 +86,68 @@ public class Main {
 
         for (int i = 0; i < 10; i++) {
 
-            System.out.println("value is " + i);
+            //  System.out.println("value is " + i);
         }
-        
 
         int j = 10;
-        while(j<20)
-        {
-         System.out.println("value is " + j);
-         j++;
+        while (j < 20) {
+            //  System.out.println("value is " + j);
+            j++;
         }
 
+        do {
+         //   System.out.println("value is " + j);
+            j--;
+        } while (j > 5);
+        String[] words = {"my", "name", "is"};
+
+        System.out.println(words[0]);
+        System.out.println("size of the array is"+words.length);
+        
+        
+        Animal dog = new Dog("x");
+        dog.makeSound();
+        
+        Square square = new Square(5);
+        
+        double area = square.getArea();
+        
+        System.out.println("Area of "+square.printName()+" is "+area);
+        
+        
+        Bat bat = new Bat();
+        bat.doFly();
+        
+        
+        ArrayList<Dog> dogs = new ArrayList();
+        
+        dogs.add(new Dog("tommy"));
+        dogs.add(new Dog("blacky"));
+        dogs.add(new Dog("brown"));
+        dogs.add(new Dog("lassie"));
+        
+        
+        
+       /// dogs.get(0)
+        
+        
+     //   dogs.size()
+        
+        
+        for(Dog d:dogs)
+        {
+            d.printName();
+        }
+        
+        
+        HashMap<String,Integer> hashMap = new HashMap<>();
+        
+        hashMap.put("stuid", 12);
+        hashMap.put("stuid", 14);
+        
+        
+        System.out.println("val is "+hashMap.get("stuid"));
+        
     }
 
 }

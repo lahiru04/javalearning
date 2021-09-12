@@ -10,10 +10,43 @@ package javalearning.model;
  * @author prasa
  */
 public class Animal {
-    
-    public void makeSound()
-    {
+
+    private double height;
+    private double weight;
+
+    public void makeSound() {
         System.out.println("-------");
     }
-    
+
+    public Animal() {
+    }
+
+    /**
+     * @return the height
+     */
+    public double getHeight() {
+        return height;
+    }
+
+    /**
+     * @param height the height to set
+     */
+    public void setHeight(double height) {
+        this.height = height;
+    }
+
+    /**
+     * @return the weight
+     */
+    public double getWeight() {
+        return weight;
+    }
+
+    /**
+     * @param weight the weight to set
+     */
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+
 }

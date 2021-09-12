@@ -9,20 +9,28 @@ package javalearning.model;
  *
  * @author prasa
  */
-public class Dog extends Animal {
+public class Square extends Shape {
 
-    private String name;
+    private int r = 5;
 
-    public Dog(String name) {
-        this.name = name;
+    public Square(int r) {
+        this.r = r;
     }
 
     @Override
-    public void makeSound() {
-        System.out.println("bow wow");
+    public double getArea() {
+
+        double area = r * r;
+        return area;
+
     }
 
-    public void printName() {
-        System.out.println("my name is"+name);
+    @Override
+    public String printName() {
+         return "Square";
     }
+    
+    
+    
+
 }
